@@ -1,0 +1,84 @@
+main{
+	height: 5000px;
+}
+
+p:hover{
+	cursor: pointer;
+}
+
+.navbar{
+	position:fixed;
+	width:80%;
+	height:7%;
+	padding:2.5% 10% 0 10%;
+	background-color: rgba(255, 255, 255, 0.25);
+	z-index: 1;
+}
+
+@media screen and (max-width: 450px) {
+	.navbar{
+		height:6%;
+		padding-right: 15%;
+	}
+}
+@media screen and (max-width: 350px) {
+	.navbar{
+		height:6%;
+		padding-right: 20%;
+	}
+}
+@media screen and (max-width: 250px) {
+	.navbar{
+		height:5.5%;
+		padding-right: 25%;
+	}
+}
+@media screen and (max-width: 150px) {
+	.navbar{
+		height:5%;
+		padding-right: 30%;
+	}
+}
+
+.navbar>img{
+	width:2%;
+	float:left;
+}
+.navbar>nav{
+	float:right;
+}
+.navbar>nav>p{
+	display: inline;
+	margin: 0 15px;
+}
+
+.link{
+	color:black;
+}
+
+.hide{
+	animation: hide;
+	animation-duration: 0.5s;
+	opacity: 0;
+}
+
+.show{
+	animation: show;
+	animation-duration: 0.5s;
+	opacity: 1;
+}
+
+@keyframes hide {
+	from{
+		opacity: 1;
+	}to{
+		opacity: 0;
+	}
+}
+@keyframes show {
+	from{
+		opacity: 0;
+	}to{
+		opacity: 1;
+	}
+}
