@@ -1,0 +1,142 @@
+#lLinks{
+	position:fixed;
+	display: flex;
+	flex-direction: column;
+	z-index: 0;
+	width: 60%;
+	height: 100%;
+	background-color: rgb(255, 255, 255);
+}
+
+#lLinks>*{
+	position: relative;
+}
+
+
+#lLinks>p{
+	margin: 2.5vh auto;
+	color: rgb(0, 0, 0);
+	font-size: 16px;
+}
+
+#lLinks>img{
+	width: 80%;
+	margin: 2vh auto;
+}
+
+#lLinks>img:hover{
+	cursor: pointer;
+}
+
+#lLinks:hover{
+	cursor: auto;
+}
+
+#bg{
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+#bg:hover{
+	cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+	#lLinks{
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	#lLinks{
+		width: 100%;
+	}
+	#lLinks>p{
+		text-align: center;
+	}
+	#links>img{
+		align-self: center;
+	}
+}
+
+.defaultBg{
+	opacity: 0;
+	display: none;
+}
+
+.defaultLateral{
+	left: -250px;
+	opacity: 0;
+}
+
+.hideLateral{
+	animation: hideLateral;
+	animation-duration: 0.5s;
+	left: -250px;
+	opacity: 0;
+}
+.showLateral{
+	animation: showLateral;
+	animation-duration: 0.5s;
+	left: 0px;
+	opacity: 1;
+}
+
+.hideBg{
+	animation: hideBg;
+	animation-duration: 0.25s;
+	opacity: 0;
+	display: none;
+}
+
+.showBg{
+	display: block;
+	animation: showBg;
+	animation-duration: 0.25s;
+	opacity: 1;
+}
+
+
+
+@keyframes showBg {
+	0%{
+		display: none;
+		opacity: 0;
+	}5%{
+		display: block;
+	}100%{
+		opacity: 1;
+	}
+}
+@keyframes hideBg {
+	0%{
+		display: block;
+		opacity: 1;
+	}99%{
+		opacity: 0;
+	}100%{
+		display: none;
+	}
+}
+
+@keyframes showLateral {
+	from{
+		opacity: 0;
+		left: -250px;
+	}to{
+		opacity: 1;
+		left:0;
+	}
+}
+@keyframes hideLateral {
+	from{
+		opacity: 1;
+		left:0;
+	}to{
+		opacity: 0;
+		left: -250px;
+	}
+}

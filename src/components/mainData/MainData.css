@@ -1,0 +1,72 @@
+.centered,.reversed,.normal{
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	min-height: 60vh;
+	padding: 5vh 5%;
+}
+
+.centered>*{
+	width: 80%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+.centered>.lateralValues>*:not(.btn){
+	width: 100%;
+}
+
+.centered{
+	align-items: center;
+}
+
+.reversed>*,.normal>*{
+	width: 50%;
+	text-align: justify;
+}
+.reversed>img{
+	max-height: 90vh;
+	margin: auto 0;
+}
+.reversed>.lateralValues{
+	margin: auto 0;
+	margin-left: auto;
+}
+.normal>img{
+	max-height: 90vh;
+	margin: auto 0;
+	margin-left: auto;
+}
+.normal>.lateralValues{
+	margin: auto 0;
+}
+
+.lateralValues{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.lateralValues>*{
+	line-break: strict;
+	max-width: 90%;
+}
+
+.lateralValues>p{
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+.btn{
+	align-self: center;
+	margin: 5% auto;
+	height: 35px;
+	width: 125px;
+	border: solid 0.005px ;
+	border-radius: 200px;
+	font-size: 14px;
+	color: white;
+	background-color: #F16666;
+}
+.btn:hover{
+	cursor: pointer;
+}
