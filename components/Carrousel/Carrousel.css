@@ -1,0 +1,116 @@
+#carrousel{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	padding: 5vh 5%;
+	min-height: 80vh;
+}
+
+#person.hidePer{
+	animation: hidePer 0.45s;
+}
+
+#person.showPer{
+	animation: showPer 0.45s;
+}
+
+#person>img{
+	max-height: 80vh;
+}
+#gradient.about{
+	margin: 2% auto;
+}
+
+#person{
+	margin: auto;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#person.reversedPer{
+	flex-wrap: wrap-reverse;
+}
+
+#person>*{
+	width: 100%;
+	position: relative;
+	margin: auto 0;
+}
+
+#buttons{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1.5vh 0;
+}
+
+
+#button{
+	width: 25px;
+	height: 25px;
+	position: relative;
+	background-color: rgb(160, 160, 160);
+	margin: auto;
+	border: -1px solid black;
+	border-radius: 45px;
+}
+#button:hover{
+	cursor: pointer;
+}
+div#button.selectedBtn{
+	background-color: rgb(0, 0, 0);
+}
+
+#button.hideBtn{
+	animation: hideBtn;
+	animation-duration: 0.9s;
+}
+
+#button.showBtn{
+	animation: showBtn;
+	animation-duration: 0.9s;
+}
+
+@keyframes hideBtn {
+	from{
+		background-color: rgb(0, 0, 0);
+	}to{
+		background-color: rgb(160, 160, 160);
+	}
+}
+
+@keyframes showBtn {
+	from{
+		background-color: rgb(160, 160, 160);
+	}to{
+		background-color: rgb(0, 0, 0);
+	}
+}
+
+@keyframes hidePer {
+	0%{
+		margin-left: 0;
+	}100%{
+		margin-left: -100vw;
+	}
+}
+
+@keyframes showPer {
+	0%{
+		margin-left: 100vw;
+	}100%{
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 500px) {
+	#person>*{
+		margin: 0 auto;
+	}
+	#lateralInfos{
+		width: 100%;
+	}
+	#lateralInfos>*{
+		text-align: center;
+	}
+}

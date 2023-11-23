@@ -1,0 +1,206 @@
+#modalBg{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	z-index: 6;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modalBg>*{
+	position: relative;
+}
+
+#modalBg:hover{
+	cursor: pointer;
+}
+
+#modalContent{
+	width: 85%;
+	height: 85%;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 20px;
+}
+
+#modalContent:hover{
+	cursor: default;
+}
+
+#modalContent>*:not(h1,h2,h3,h4,h5,h6,button){
+	max-width: 90%;
+	margin: 20px auto;
+}
+
+#modalContent>h1,#modalContent>h2,#modalContent>h3,#modalContent>h4,#modalContent>h5,#modalContent>h6{
+	margin: 50px auto;
+}
+#modalContent>*{
+	width: fit-content;
+}
+
+#btn{
+	margin: 1vh 1vw auto auto;
+	float: right;
+	border: none;
+	background-color: white;
+	font-size: 24px;
+	color: gray;
+}
+#btn:hover{
+	cursor: pointer;
+}
+.defaultModalBg{
+	opacity: 0;
+	display: none;
+}
+.defaultModalContent{
+	margin: -100vh auto auto auto;
+}
+
+.showModalBg{
+	animation: showModalBg 0.5s;
+	opacity: 1;
+	display: flex;
+}
+.hideModalBg{
+	animation: hideModalBg 0.5s;
+	opacity: 0;
+	display: flex;
+}
+.showMCleft{
+	animation: showMCl 1s;
+	margin: auto;
+}
+.showMCright{
+	animation: showMCr 1s;
+	margin: auto;
+}
+.showMCtop{
+	animation: showMCt 1s;
+	margin: auto;
+}
+.showMCbutton{
+	animation: showMCb 1s;
+	margin: auto;
+}
+
+.hideMCleft{
+	animation: hideMCl 1s;
+	margin: auto;
+}
+.hideMCright{
+	animation: hideMCr 1s;
+	margin: auto;
+}
+.hideMCtop{
+	animation: hideMCt 1s;
+	margin: auto;
+}
+.hideMCbutton{
+	animation: hideMCb 1s;
+	margin: auto;
+}
+
+.noScroll{
+	overflow-y: hidden;
+}
+@keyframes showModalBg {
+	0%{
+		display: none;
+		opacity: 0;
+	}10%{
+		display: flex;
+
+	}100%{
+		opacity: 1;
+	}
+}
+@keyframes hideModalBg {
+	0%{
+		opacity: 1;
+	}90%{
+		opacity: 0;
+	}100%{
+		display: none;
+	}
+}
+
+@keyframes showMCl {
+	from{
+		margin: auto auto auto -95vw;
+	}to{
+		margin: auto auto auto calc(100vw/2 - 85vw/2);
+	}
+}
+@keyframes showMCr {
+	from{
+		margin: auto -95vw auto auto;
+	}to{
+		margin: auto calc(100vw/2 - 85vw/2) auto auto;
+	}
+}
+@keyframes showMCt {
+	from{
+		margin: -95vh auto auto auto;
+	}to{
+		margin: calc(100vh/2 - 85vh/2) auto auto auto;
+	}
+}
+@keyframes showMCb {
+	from{
+		margin: auto auto -95vh auto;
+	}to{
+		margin: auto auto calc(100vh/2 - 85vh/2) auto;
+	}
+}
+@keyframes hideMCl {
+	from{
+		margin: auto auto auto calc(100vw/2 - 85vw/2);
+	}to{
+		margin: auto auto auto -95vw;
+	}
+}
+@keyframes hideMCr {
+	from{
+		margin: auto calc(100vw/2 - 85vw/2) auto auto;
+	}to{
+		margin: auto -95vw auto auto;
+	}
+}
+@keyframes hideMCt {
+	from{
+		margin: calc(100vh/2 - 85vh/2) auto auto auto;
+	}to{
+		margin: -95vh auto auto auto;
+	}
+}
+@keyframes hideMCb {
+	from{
+		margin: auto auto calc(100vh/2 - 85vh/2) auto;
+	}to{
+		margin: auto auto -95vh auto;
+	}
+}
+
+@media screen and (max-width:450px) {
+	#modalContent{
+		width: 95%;
+	}
+	@keyframes showMCL {
+		from{
+			margin: auto auto auto -95vw;
+		}to{
+			margin: auto auto auto calc(100vw/2 - 95vw/2);
+		}
+	}
+	@keyframes showMCL {
+		from{
+			margin: auto -95vw auto auto;
+		}to{
+			margin: auto calc(100vw/2 - 95vw/2) auto auto;
+		}
+	}
+}

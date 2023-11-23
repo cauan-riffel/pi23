@@ -1,0 +1,77 @@
+#footer{
+	display: flex;
+	flex-direction: column;
+
+	width: 90%;
+	min-height: 45vh;
+	padding: 5% 5% 20px 5%;
+}
+
+#footer>h1{
+	margin: 5% auto;
+	width: 260px;
+	height: 77px;
+	color:rgb(230, 249, 255);
+	font-family: Inter;
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 77px;
+	letter-spacing: 0em;
+
+	background: -webkit-linear-gradient(357deg, #6953D3 26.98%, #8566F1 49.72%, #A14EEE 72.46%, #F98085 95.21%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#contacts{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	margin: 5% auto;
+}
+#contacts>div{
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+}
+#contacts>div>*{
+	margin-left: 10px;
+}
+#contacts>div>div>*{
+	max-width: 230px;
+	line-break: strict;
+}
+
+#footerLogo{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 5% auto;
+}
+#footerLogo>img:hover{
+	cursor: pointer;
+}
+#footerLogo>*{
+	margin:1.5% auto;
+}
+#separator{
+	width: 100%;
+	height: 5px;
+	background-color: gray;
+	margin:10px 0;
+}
+#copyright{
+	margin: 1% auto;
+	font-size: 14px;
+}
+#icons{
+	display: flex;
+	flex-wrap: nowrap;
+	min-width: 200px;
+}
+#icons>*{
+	margin: auto;
+}
+#icons>*:hover{
+	cursor: pointer;
+}
