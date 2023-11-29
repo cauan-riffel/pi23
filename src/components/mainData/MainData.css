@@ -1,0 +1,99 @@
+.centered,.reversed,.normal{
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	min-height: 60vh;
+	padding: 5vh 5%;
+}
+
+#gradient{
+	background: -webkit-linear-gradient(1deg, #6953D3 26.98%, #8566F1 49.72%, #A14EEE 72.46%, #F98085 95.21%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#quiz{
+	color: white;
+}
+#quiz>#lateraValues{
+	display: flex;
+	flex-direction: column;
+}
+#quiz>#lateraValues>p{
+	text-align: justify;
+}
+
+.centered>*{
+	width: 80%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+.centered>.lateralValues>*:not(.btn){
+	width: 88%;
+	margin: auto;
+}
+
+.centered{
+	align-items: center;
+}
+
+.reversed>*,.normal>*{
+	width: 50%;
+}
+
+.reversed>*>p,.normal>*>p{
+	text-align: justify;
+}
+
+.reversed>img{
+	max-height: 90vh;
+	margin: auto 0;
+}
+.reversed>.lateralValues{
+	margin: auto 0;
+	margin-left: auto;
+}
+.normal>img{
+	max-height: 90vh;
+	margin: auto 0;
+	margin-left: auto;
+}
+.normal>.lateralValues{
+	margin: auto 0;
+}
+
+.lateralValues{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.lateralValues>*{
+	line-break: strict;
+}
+
+.lateralValues>p{
+	font-size: 700;
+}
+
+.btn{
+	align-self: center;
+	margin: 5% auto;
+	height: 35px;
+	width: 125px;
+	border: solid 0.005px ;
+	border-radius: 200px;
+	font-size: 14px;
+	color: white;
+	background-color: #F16666;
+}
+
+.btn:hover{
+	cursor: pointer;
+}
+
+@media screen and (max-width:450px) {
+	.centered{
+		width: 100%;
+	}
+}
